@@ -21,7 +21,7 @@ export async function POST(req) {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
     const config = { responseMimeType: "text/plain" };
-    const model = "gemini-pro";
+    const model = "gemini-2.5-flash";
 
     const prompt = `Create a set of ${count} interview questions along with their answers for a ${jobPosition} with ${experience} years of experience. The main technologies to focus on are: ${jobDesc}. Provide both technical and behavioral questions in pure JSON format with the following structure:
 
